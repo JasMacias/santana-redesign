@@ -1,0 +1,29 @@
+---
+import NavbarDesktopDevice from './components/NavbarDesktopDevice.astro';
+import NavbarMobileDevice from './components/NavbarMobileDevice.astro';
+---
+
+<header class="h-nh bg-black">
+  <NavbarDesktopDevice class="fixed sm:flex hidden flex-col w-screen h-nh bg-black duration-300 ease-in-out" id="navbar"/>
+  <NavbarMobileDevice/>
+</header>
+
+
+<script>
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('nav')!;
+
+    let currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      navbar.style.top = '-88px';
+    } else {
+      navbar.style.top = '0px';
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

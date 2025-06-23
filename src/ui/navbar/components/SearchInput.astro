@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import HeroSearchIcon from "@/assets/hero-search-icon.svg";
+
+export interface Props extends HTMLAttributes<'li'> {}
+
+const {
+  ...attrs
+} = Astro.props;
+---
+
+<li {...attrs}>
+  <input
+    class="grow bg-white p-2 focus:outline-hidden"
+    placeholder="Buscar..."
+  />
+  <a href="#" class="p-2 bg-gray-500/50 border boder-gray-500/50 sm:scale-[1] scale-[1.05]">
+    <HeroSearchIcon/>
+  </a>
+</li>

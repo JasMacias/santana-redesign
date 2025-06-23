@@ -1,0 +1,25 @@
+---
+import HeroSantana from "@/assets/hero-santana.jpg";
+
+import type { HTMLAttributes } from "astro/types";
+
+
+export interface Props extends HTMLAttributes<'img'> {
+  
+}
+
+const {
+  ...attrs
+} = Astro.props;
+---
+
+<a href="#">
+  <picture>
+    <img 
+      {...attrs}
+      class="object-cover"
+      src={HeroSantana.src}
+      alt="Santana Home Page 🏠"
+      >
+  </picture>
+</a>

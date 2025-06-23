@@ -1,0 +1,145 @@
+---
+import HeroMailIcon from "@/assets/hero-mail-icon.svg";
+import HeroMenuIcon from "@/assets/hero-menu-icon.svg";
+import HeroRegisterIcon from "@/assets/hero-register-icon.svg";
+import HeroFavoriteIcon from "@/assets/hero-favorite-icon.svg";
+import HeroShoppingCartIcon from "@/assets/hero-shopping-cart-icon.svg";
+import HeroHomeIcon from "@/assets/hero-home-icon.svg";
+import HeroSeeekCategoriesIcon from "@/assets/hero-seek-categories-icon.svg";
+import HeroAccessoriesIcon from "@/assets/hero-accessories-icon.svg";
+
+import SantanaHomePage from "./SantanaHomePage.astro";
+import SearchInput from "./SearchInput.astro";
+---
+
+
+<nav class="sm:hidden fixed flex flex-col justify-center items-center">
+  <ul class="flex justify-evenly items-center h-nmh bg-black w-screen px-2">
+    <li class="mr-2">
+      <a href="#">
+        <HeroMenuIcon/>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <HeroMailIcon/>
+      </a>
+    </li>
+    <SearchInput class="flex justify-center w-[70%] scale-[.9]" id="seeker"/>
+    <li class="w-[70%] hidden flex justify-center items-center" id="home">
+      <SantanaHomePage
+        width="100"
+        height="56"
+      />
+    </li>
+    <li class="flex justify-center items-center">
+      <a href="#" class="flex justify-center items-center">
+        <HeroFavoriteIcon/>
+        <span class="text-sm text-gray-500 mt-2">0</span>
+      </a>
+    </li>
+    <li class="flex justify-center items-center">
+      <a href="#" class="flex justify-center items-center">
+        <HeroShoppingCartIcon/>
+        <span class="text-sm text-gray-500 mt-2">0</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="flex justify-evenly items-center w-screen text-sm py-2 bg-black/50 backdrop-sepia-50 text-white">
+    <li>
+      <a href="#">
+        Accesorios
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Hombres
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Mujeres
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        Descuentos
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="sm:hidden fixed bg-black/70 backdrop-sepia-50 w-screen h-[3rem] left-[0] bottom-[0]">
+  <ul class="flex justify-between items-center h-full text-gray-400 text-xs">
+    <li class="links">
+      <a href="#">
+        <HeroHomeIcon/>
+      </a>
+      <span>
+        Principal
+      </span>
+    </li>
+    <li class="links">
+      <a href="#">
+        <HeroSeeekCategoriesIcon/>
+      </a>
+      <span>
+        Categorias
+      </span>
+    </li>
+    <li class="flex justify-center items-center w-1/12">
+      <a href="#" class="p-2 bg-black/40 backdrop-sepia-50 rounded-full">
+        <HeroAccessoriesIcon/>
+      </a>
+    </li>
+    <li class="links">
+      <a href="#">
+        <HeroShoppingCartIcon/>
+      </a>
+      <span>
+        Carrito
+      </span>
+    </li>
+    <li class="links">
+      <a href="#">
+        <HeroRegisterIcon/>
+      </a>
+      <span>
+        Yo
+      </span>
+    </li>
+  </ul>
+</nav>
+
+
+<style>
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80px;
+    align-items: center;
+  }
+</style>
+
+<script>
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    const seeker = document.getElementById('seeker')!;
+    const home = document.getElementById('home')!;
+
+    let currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      home.classList.add("hidden");
+      seeker.classList.remove("hidden")
+    } else {
+      home.classList.remove("hidden");
+      seeker.classList.add("hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

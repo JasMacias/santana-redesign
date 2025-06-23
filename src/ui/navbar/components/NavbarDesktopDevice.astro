@@ -1,0 +1,72 @@
+---
+import SantanaHomePage from "./SantanaHomePage.astro";
+import SearchInput from "./SearchInput.astro";
+
+import HeroRegisterIcon from "@/assets/hero-register-icon.svg";
+import HeroShoppingCartIcon from "@/assets/hero-shopping-cart-icon.svg";
+import HeroFavoriteIcon from "@/assets/hero-favorite-icon.svg";
+
+import type { HTMLAttributes } from "astro/types";
+
+export interface Props extends HTMLAttributes<'nav'>{}
+
+const {
+  ...attrs
+} = Astro.props;
+---
+
+<nav {...attrs}>
+  <ul class="flex pl-6">
+    <li>
+      <SantanaHomePage 
+        width="158"
+        height="88"
+      />
+    </li>
+    <SearchInput class="flex justify-center items-center w-[50%] ml-auto mr-2"/>
+    <li class="flex justify-center items-center mr-4 ml-auto">
+      <a href="#" class="flex justify-center items-center">
+        <HeroRegisterIcon/>
+      </a>
+   </li>
+    <li class="flex justify-center items-center mr-4">
+      <a href="#" class="flex justify-center items-center">
+        <HeroShoppingCartIcon/>
+        <span class="text-sm text-gray-500 mt-2">0</span>
+      </a>
+    </li>
+    <li class="flex justify-center items-center mr-5">
+      <a href="#" class="flex justify-center items-center">
+        <HeroFavoriteIcon/>
+        <span class="text-sm text-gray-500 mt-2">0</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="flex justify-between px-6 bg-black/70 backdrop-sepia-50 text-sm text-white">
+    <li class="list-article">
+      <a href="#">
+        Accesorios
+      </a>
+    </li>
+    <li class="list-article">
+      <a href="#">
+        Hombres
+      </a>
+    </li>
+    <li class="list-article">
+      <a href="#">
+        Mujeres
+      </a>
+    </li>
+    <li class="list-article">
+      <a href="#">
+        +Categorias
+      </a>
+    </li>
+    <li class="list-article">
+      <a href="#">
+        Descuentos
+      </a>
+    </li>
+  </ul>
+</nav>

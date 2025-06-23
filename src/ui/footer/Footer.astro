@@ -1,0 +1,209 @@
+---
+import HeroFacebookIcon from "@/assets/hero-facebook-icon.svg";
+import HeroInstagramIcon from "@/assets/hero-instagram-icon.svg";
+import HeroTwitterIcon from "@/assets/hero-twitter-icon.svg";
+import HeroThreadsIcon from "@/assets/hero-threads.svg";
+import HeroPinterestIcon from "@/assets/hero-pinterest-icon.svg";
+import HeroTiktokIcon from "@/assets/hero-tiktok-icon.svg";
+import HeroPaypalIcon from "@/assets/hero-paypal-icon.svg";
+import HeroMasterCardIcon from "@/assets/hero-mastercard-icon.svg"
+import HeroVisaIcon from "@/assets/hero-visa-icon.svg";
+import heroEmailIcon from "@/assets/hero-Email-icon.png";
+---
+
+
+<footer class="flex flex-wrap gap-x-12 w-screen pt-[4.5rem] sm:px-[2rem] px-4 xl:gap-y-[0rem] gap-y-10">
+  <section class="flex xl:justify-start justify-between xl:grow-0 grow gap-x-10">
+    <div>
+      <h4>SOBRE NOSOTROS</h4>
+      <ul>
+        <li>
+          <a href="#">
+            Quienes Somos
+          </a>
+          <a href="#">
+            Empleos
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>AYUDA & APOYO</h4>
+      <ul>
+        <li>
+          <a href="#">
+            Información de Envió
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Devolución
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Reembolso
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Cómo Realizar El 
+            Pedido
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Rastrear El Pedido
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4>
+        SERVICIO AL 
+        <br>
+        CLIENTE
+      </h4>
+      <ul>
+        <li>
+          <a href="#">
+            Contáctanos
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Forma de Pago
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Puntos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="flex flex-col grow-2 gap-y-8 ">
+    <h4>
+      SUSCRÍBETE PARA RECIBIR OFERTAS, PROMOCIONES Y MÁS
+    </h4>
+    <div class="flex">
+      <input type="email" class="w-full p-2 border border-black/40 text-xs" placeholder="Tu Correo Electronico">
+      <button class="py-2 sm:px-[2.5rem] px-2 text-white bg-black font-semibold">
+        Suscribir
+      </button>
+    </div>
+    <div class="flex">
+      <select class="py-2 sm:px-4 px-2 font-extralight border-y border-l border-black/20 text-xs">
+        <option value="CO" selected>CO +57</option>
+      </select>
+      <input type="email" class="w-full p-2 border border-black/40 text-xs" placeholder="Tu número de Telefono para SMS">
+      <button class="py-2 sm:px-[2.5rem] px-2 text-white bg-black font-semibold">
+        Suscribir
+      </button>
+    </div>
+    <div class="flex mb-10">
+      <select class="py-2 sm:px-4 px-2 font-extralight border-y border-l border-black/20 text-xs">
+        <option value="CO" selected>CO +57</option>
+      </select>
+      <input type="email" class="w-full p-2 border border-black/40 text-xs" placeholder="Cuenta de WhatsApp">
+      <button class="py-2 sm:px-[2.5rem] px-2 text-white bg-black font-semibold">
+        Suscribir
+      </button>
+    </div>
+    <div class="flex flex-col">
+      <h4>
+        FORMAS DE PAGO
+      </h4>
+      <ul class="flex gap-x-10">
+        <li>
+          <HeroVisaIcon class="w-10 h-auto"/>
+        </li>
+        <li>
+          <HeroPaypalIcon class="w-10 h-auto"/>
+        </li>
+        <li>
+          <HeroMasterCardIcon class="w-10 h-auto"/>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="xl:w-auto w-full">
+    <div class="flex flex-col xl:justify-center xl:items-center">
+      <h4>SÍGUENOS</h4>
+      <ul class="flex xl:flex-col flex-wrap xl:justify-start justify-between md:gap-x-[0rem] gap-x-2">
+        <li>
+          <a href="#">
+            <HeroFacebookIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <HeroInstagramIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <HeroTwitterIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <HeroTiktokIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <HeroThreadsIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <HeroPinterestIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <picture>
+              <img src={heroEmailIcon.src} alt="email anchor link">
+            </picture>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="flex flex-col justify-center items-center border-black/50 border-t w-screen py-5 gap-y-5">
+    <ul class="flex flex-wrap text-sm text-black/50 gap-x-5">
+      <li>Términos y Condiciones</li>
+      <span>|</span>
+      <li>Términos y Condiciones Promociones</li>
+      <span>|</span>
+      <li>Politica de Privacidad</li>
+      <span>|</span>
+      <li>🇨🇴  Colombia</li>
+    </ul>
+    <span class="text-xs font-light">
+      &copy;2024 santana collection, santana collection Colombia.
+    </span>
+
+  </section>
+</footer>
+
+
+<style>
+ul {
+  font-size: small;
+}
+
+ul > li {
+  margin-bottom: .5em;
+}
+
+h4 {
+  margin-bottom: 1em;
+  font-weight: bolder;
+}
+
+</style>
