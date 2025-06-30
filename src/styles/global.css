@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @theme {
   --spacing-nh: 5.5rem;
   --spacing-nmh: 3.5rem;
